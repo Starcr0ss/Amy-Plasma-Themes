@@ -154,19 +154,6 @@ Image {
         }
     }
 
-    Text {
-    visible: true
-    height: 1470
-    width: 1920
-    Text {
-        id: text
-        font.pointSize: 24
-        x: (root.width - width) / 2
-        y: (root.height / 3) * 2
-        anchors.centerIn: parent
-        text: "Linux For Open Minds"
-        visible: false
-    }
     LinearGradient  {
         anchors.fill: text
         source: text
@@ -187,23 +174,6 @@ Image {
         to: 1
         duration: 2000
         easing.type: Easing.InOutQuad
-    }
-    
-    Text {
-        id: loadingText
-        height: 30
-        anchors.bottomMargin: 0
-        anchors.topMargin: 0
-        text: "Linux For Open Minds"
-        color: "#2e75bc"
-        font.family: webFont.name
-        font.weight: Font.ExtraLight
-
-        font.pointSize: 20
-        opacity: 0
-        textFormat: Text.StyledText
-        x: (root.width - width) / 2
-        y: (root.height / 3) * 2
     }
 
     OpacityAnimator {
