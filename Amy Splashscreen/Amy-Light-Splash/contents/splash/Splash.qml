@@ -165,38 +165,3 @@ Image {
         }
     }
 }
-    
-    OpacityAnimator {
-        id: preOpacityAnimation
-        running: false
-        target: preLoadingText
-        from: 0
-        to: 1
-        duration: 2000
-        easing.type: Easing.InOutQuad
-    }
-    
-    OpacityAnimator {
-        id: opacityAnimation
-        running: false
-        target: loadingText
-        from: 0
-        to: 1
-        duration: 000
-        easing.type: Easing.InOutQuad
-        paused: true
-    }
-
-    Timer {
-        id: pausa
-        interval: 1500; running: false; repeat: false;
-        onTriggered: root.viewLoadingText();
-    }
-
-    function viewLoadingText() {
-        opacityAnimation.from = 0;
-        opacityAnimation.to = 1;
-        opacityAnimation.running = true;
-    }
-
-}
